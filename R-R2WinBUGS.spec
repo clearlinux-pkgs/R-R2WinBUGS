@@ -4,7 +4,7 @@
 #
 Name     : R-R2WinBUGS
 Version  : 2.1.21
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/R2WinBUGS_2.1-21.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R2WinBUGS_2.1-21.tar.gz
 Summary  : Running 'WinBUGS' and 'OpenBUGS' from 'R' / 'S-PLUS'
@@ -21,21 +21,22 @@ results and functions to work with that class.
 
 %prep
 %setup -q -c -n R2WinBUGS
+cd %{_builddir}/R2WinBUGS
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562092626
+export SOURCE_DATE_EPOCH=1589523200
 
 %install
-export SOURCE_DATE_EPOCH=1562092626
+export SOURCE_DATE_EPOCH=1589523200
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
