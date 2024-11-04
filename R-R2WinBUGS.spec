@@ -7,7 +7,7 @@
 #
 Name     : R-R2WinBUGS
 Version  : 2.1.22.1
-Release  : 32
+Release  : 33
 URL      : https://cran.r-project.org/src/contrib/R2WinBUGS_2.1-22.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R2WinBUGS_2.1-22.1.tar.gz
 Summary  : Running 'WinBUGS' and 'OpenBUGS' from 'R' / 'S-PLUS'
